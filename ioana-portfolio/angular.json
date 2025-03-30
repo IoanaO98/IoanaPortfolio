@@ -35,7 +35,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "/Portfolio/"
+            "baseHref": "/ioanaPortofolio/"
           },
           "configurations": {
             "production": {
