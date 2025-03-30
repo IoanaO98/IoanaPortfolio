@@ -1,3 +1,55 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme object.
+$ioana-portfolio-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($ioana-portfolio-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($ioana-portfolio-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($ioana-portfolio-theme);
+
+
+:root {
+  --io-color-primary:             #06060a;
+  --io-color-secondary:           #3c4070;
+  --io-color-tertiary:            #1b692c;
+
+  --io-color-higlight-primary:    #cfdb1e;
+  --io-color-higlight-secondary:  #26af44;
+  --io-color-higlight-tertiary:   #ad3128;
+
+  --io-color-black:               #000000;
+  --io-color-gray:                #505050;
+  --io-color-white:               #ffffff;
+  --io-color-transparent:           rgba(255, 255, 255, 0)
+}
     * {
         margin: 0;
         padding: 0;
@@ -12,7 +64,8 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        padding: 1rem;
+        background: linear-gradient(14deg, var(--io-color-secondary) 30%, var(--io-color-primary) 70%);
+       // padding: 1rem;
     }
 
     .container {
@@ -70,3 +123,5 @@
             font-size: 1rem;
         }
     }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
