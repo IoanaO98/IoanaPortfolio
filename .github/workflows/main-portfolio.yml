@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          access_token: ${{secrets.ACCESS_TOKEN}}
+          # access_token: ${{secrets.ACCESS_TOKEN}}
           base_branch: main
           branch: prod
           folder: ioana-portfolio/dist/browser
