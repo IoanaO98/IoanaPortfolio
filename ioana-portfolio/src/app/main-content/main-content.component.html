@@ -1,17 +1,17 @@
-   <div class="skills-cloud">
-     <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
-       {{ skill.name }}
-     </div>
-   </div>
-   <div class="flex-container">
-     <h2 class="slide-in-text">
-       <ng-container *ngFor="let letter of titleLetters; let i = index">
-         <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
-       </ng-container>
-     </h2>
-   </div>
+<div class="flex-container">
+  <div class="skills-cloud">
+    <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
+      {{ skill.name }}
+    </div>
+  </div>
+  <h2 class="slide-in-text">
+    <ng-container *ngFor="let letter of titleLetters; let i = index">
+      <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
+    </ng-container>
+  </h2>
+</div>
 
-   <!-- <div class="video-background">
+<!-- <div class="video-background">
     <video autoplay muted loop playsinline>
       <source src="assets/video/Scene-1.mp4" type="video/mp4" />
       Your browser does not support the video tag.
