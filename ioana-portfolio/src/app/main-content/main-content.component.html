@@ -4,11 +4,12 @@
       {{ skill.name }}
     </div>
   </div>
-  <h2 class="slide-in-text">
+  <h2 *ngIf="showTitle" class="slide-in-text">
     <ng-container *ngFor="let letter of titleLetters; let i = index">
       <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
     </ng-container>
   </h2>
+
 </div>
 
 <!-- <div class="video-background">
