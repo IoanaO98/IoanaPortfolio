@@ -1,0 +1,18 @@
+<div class="py-section section-page">
+  <div class="books-cards-grid"></div>
+  <div class="books-app-info">
+    <p style="color: aliceblue;">Bookstore Project Overview</p>
+    <p class="slide-in-text">
+      <ng-container *ngFor="let letter of titleLetters; let i = index">
+        <br *ngIf="isBr(letter)" />
+        <span *ngIf="!isBr(letter)" [style.animationDelay]="i * 15 + 'ms'" [ngClass]="{ 'space': letter === ' ' }">
+          {{ letter }}
+        </span>
+      </ng-container>
+    </p>
+
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>

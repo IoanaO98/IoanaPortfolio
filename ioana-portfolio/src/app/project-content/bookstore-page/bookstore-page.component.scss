@@ -1,0 +1,65 @@
+.section-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10rem;
+    padding: 2rem;
+}
+.py-section{
+    padding-top: 10rem;
+}
+.books-cards-grid {
+  background-color: transparent;
+  background-image: url('/assets/images/01.webp');
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px #f4f3f6;
+  transition: transform 0.3s ease;
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+}
+
+.books-app-info {
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 300px;
+  width: 500px;
+}
+.slide-in-text {
+  overflow: visible; 
+  white-space: normal; 
+  position: relative;  
+  top: auto;           
+  text-align: center;
+  width: 100%;
+  color: aliceblue;
+
+  span {
+    display: inline-block;
+  transform: none;  
+  opacity: 0;
+  animation: slideIn 0.2s ease-out forwards;
+  word-wrap: break-word; 
+  }
+
+  .space {
+    width: 0.5em; 
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+   } 
+}

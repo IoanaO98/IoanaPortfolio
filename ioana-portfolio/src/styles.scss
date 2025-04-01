@@ -60,10 +60,10 @@ $ioana-portfolio-theme: mat.define-theme((
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f5f5f5;
         color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+       // display: flex;
+        // justify-content: center;
+        // align-items: center;
+       // min-height: 100vh;
         background: linear-gradient(14deg, var(--io-color-secondary) 30%, var(--io-color-primary) 70%);
        // padding: 1rem;
     }

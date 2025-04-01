@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ProjectContentComponent } from '../project-content/project-content.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectContentComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
@@ -19,7 +20,7 @@ export class MainContentComponent implements OnInit {
     'Angular',
     '.Net',
     'Bootstrap',
-    'EntityFramework',
+    'Entity Framework',
     'Azure',
     'Tailwind',
     'C#',
