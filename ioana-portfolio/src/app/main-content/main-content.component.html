@@ -1,14 +1,20 @@
-  <div class="flex-container">
-    <div class="container">
-      <h1>Osan Ioana</h1>
-      <h2>Full Stack Developer</h2>
-      <p>
-        I build modern applications using Angular, TypeScript, Node.js, Bootstrap, Tailwind CSS, JavaScript, .NET, C#,
-        and
-        more.
-      </p>
-      <a href="https://github.com/IoanaO98" target="_blank" class="github-link">
-        View My GitHub
-      </a>
-    </div>
-  </div>
+   <div class="skills-cloud">
+     <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
+       {{ skill.name }}
+     </div>
+   </div>
+   <div class="flex-container">
+     <h2 class="slide-in-text">
+       <ng-container *ngFor="let letter of titleLetters; let i = index">
+         <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
+       </ng-container>
+     </h2>
+   </div>
+
+   <!-- <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/Scene-1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+  </div> -->
