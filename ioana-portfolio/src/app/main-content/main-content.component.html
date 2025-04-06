@@ -1,15 +1,45 @@
 <div class="col-container">
   <section class="section-py-space flex-container">
-    <div class="skills-cloud">
-      <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
-        {{ skill.name }}
+    <ng-container *ngIf="!showFinalLayout">
+      <div class="skills-cloud">
+        <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
+          {{ skill.name }}
+        </div>
       </div>
-    </div>
-    <h2 *ngIf="showTitle" class="slide-in-text">
-      <ng-container *ngFor="let letter of titleLetters; let i = index">
-        <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
-      </ng-container>
-    </h2>
+
+      <!-- Title animation -->
+      <h2 *ngIf="showTitle" class="slide-in-text">
+        <ng-container *ngFor="let letter of titleLetters; let i = index">
+          <span [style.animationDelay]="(i * 150) + 'ms'" [ngClass]="{ 'space': letter === ' ' }">{{ letter }}</span>
+        </ng-container>
+      </h2>
+    </ng-container>
+    <ng-container *ngIf="showFinalLayout">
+      <div class="main-flex">
+        <!-- LEFT: text box -->
+        <div class="intro-box">
+          <span class="dragged-title">Hi, I'm Ioana, a <span class="job-title-inline">Full Stack Developer</span>.<br>
+          </span>
+          <span>Some text about developing...</span>
+          <div class="box-button">
+            <span>Social media section</span>
+          </div>
+          <div class="box-button">
+            <button class="custom-glow-button">Download CV</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: photo box -->
+        <div class="photo-box">
+          <div class="avatar">
+            <p>there will be my picture</p>
+          </div>
+
+        </div>
+      </div>
+
+    </ng-container>
+
   </section>
 
   <section class="section-py-space flex-container">

@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProjectContentComponent } from '../project-content/project-content.component';
-
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, ProjectContentComponent],
+  imports: [CommonModule, ProjectContentComponent, MatButtonModule],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent implements OnInit {
   showTitle = false;
+  showFinalLayout = false;
   title = 'Full Stack Developer.';
   titleLetters = this.title.split('');
 
@@ -45,8 +46,15 @@ export class MainContentComponent implements OnInit {
   ngOnInit(): void {
     const totalDelay = this.skills.length * 0.3 + 2.5;
 
+    // Step 1: show animated title
     setTimeout(() => {
       this.showTitle = true;
     }, totalDelay * 1000);
+
+    // Step 2: after title animates, hide all and show final layout
+    setTimeout(() => {
+      this.showTitle = false;
+      this.showFinalLayout = true;
+    }, totalDelay * 1000 + this.titleLetters.length * 150 + 1000);
   }
 }

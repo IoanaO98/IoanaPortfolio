@@ -89,4 +89,95 @@
 }
 
 
+/* FINAL LAYOUT */
 
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  gap: 2rem;
+  animation: fadeInLayout 1s ease-in-out;
+  width: 80%;
+}
+
+@keyframes fadeInLayout {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.intro-box {
+  width: 50%;
+  padding: 2rem;
+  min-height: 300px;
+  position: relative;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+
+/* Circular avatar container */
+.photo-box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  position: relative;
+}
+
+.photo-box .avatar {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: #ffffff22; // subtle background for placeholder
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 14px 8px #f4f3f6;
+}
+
+
+/* Title drag-in effect */
+.dragged-title {
+  animation: dragIn 0.7s ease-out;
+}
+
+@keyframes dragIn {
+  0% { opacity: 0; transform: translate(200px, -50px) scale(0.8); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+.job-title-inline {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.box-button{
+  padding-left: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.custom-glow-button {
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 999px; // Makes it pill/circle-shaped
+  background-color: aliceblue;
+  color: #131c2b; 
+  box-shadow: 0 0 15px white;
+  padding: 8px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1); // subtle hover effect
+    box-shadow: 0 0 25px white;
+    color:aliceblue;
+  }
+}
