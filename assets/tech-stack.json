@@ -1,0 +1,87 @@
+{
+  "title": "TECH STACK",
+  "categories": [{
+      "name": "Frontend",
+      "subcategories": [{
+          "subname": "Basics",
+          "items": [
+            "Front HTML",
+            "CSS/SCSS",
+            "JavaScript",
+            "TypeScript"
+          ]
+        },
+        {
+          "subname": "Frameworks",
+          "items": [
+            "Angular",
+            "Webpack"
+          ]
+        },
+        {
+          "subname": "Styles",
+          "items": [
+            "Bootstrap",
+            "Material UI",
+            "Tailwind"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "subcategories": [{
+        "subname": "Technology",
+        "items": [
+          "Node",
+          "ASP.NET"
+        ]
+      }]
+    },
+    {
+      "name": "Database",
+      "subcategories": [{
+        "subname": "RDBMS",
+        "items": [
+          "MySQL"
+        ]
+      }]
+    },
+    {
+      "name": "DevOps",
+      "subcategories": [{
+          "subname": "Infrastructure",
+          "items": [
+            "Azure"
+          ]
+        },
+        {
+          "subname": "Automation",
+          "items": [
+            "Docker",
+            "Kubernetes",
+            "VM"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile App",
+      "subcategories": [{
+          "subname": "Cross Platform",
+          "items": [
+            "Ionic"
+          ]
+        },
+        {
+          "subname": "Android",
+          "items": [
+            "JAVA",
+            "Kotlin",
+            "SDK"
+          ]
+        }
+      ]
+    }
+  ]
+}
