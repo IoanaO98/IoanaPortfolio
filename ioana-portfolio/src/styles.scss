@@ -26,6 +26,10 @@ $ioana-portfolio-theme: mat.define-theme((
 // that you are using.
 :root {
   @include mat.all-component-themes($ioana-portfolio-theme);
+//    @include mat.form-field-overrides((
+//    // focus-indicator-color: #ff7f50, // Coral (or pick your color)
+//     mat-form-field-appearance-outline mat-primary: --mat-sys-primary,   // Also to make outline match
+//   ));
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
@@ -34,7 +38,6 @@ $ioana-portfolio-theme: mat.define-theme((
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($ioana-portfolio-theme);
-
 
 :root {
   --io-color-primary:             #06060a;
@@ -49,6 +52,7 @@ $ioana-portfolio-theme: mat.define-theme((
   --io-color-gray:                #505050;
   --io-color-white:               #ffffff;
   --io-color-transparent:           rgba(255, 255, 255, 0)
+  --mat-sys-primary: aliceblue;
 }
     * {
         margin: 0;
@@ -124,5 +128,5 @@ $ioana-portfolio-theme: mat.define-theme((
             font-size: 1rem;
         }
     }
-html, body { height: 100%; }
+html, body { height: 100%; scroll-behavior: smooth;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

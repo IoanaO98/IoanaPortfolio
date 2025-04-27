@@ -2,10 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProjectContentComponent } from '../project-content/project-content.component';
 import { MatButtonModule } from '@angular/material/button';
+import { TechSuitPageComponent } from '../tech-suit-page/tech-suit-page.component';
+import { ContactSectionComponent } from '../contact-section/contact-section.component';
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, ProjectContentComponent, MatButtonModule],
+  imports: [
+    CommonModule,
+    ProjectContentComponent,
+    MatButtonModule,
+    TechSuitPageComponent,
+    ContactSectionComponent,
+  ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })

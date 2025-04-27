@@ -1,0 +1,21 @@
+<div class="tech-stack">
+  <h1>{{ title }}</h1>
+
+  <div class="grid">
+    <div class="grid-item" *ngFor="let category of techStack">
+      <div class="border-lines">
+        <div class="line"></div>
+      </div>
+      <!-- vertical line for this category -->
+      <div class="category">
+        <h2>{{ category.name }}</h2>
+        <div *ngFor="let subcategory of category.subcategories">
+          <h3>{{ subcategory.subname }}</h3>
+          <ul>
+            <li *ngFor="let item of subcategory.items">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="col-container">
-  <section class="section-py-space flex-container">
+  <section id="home" class="section-py-space flex-container">
     <ng-container *ngIf="!showFinalLayout">
       <div class="skills-cloud">
         <div *ngFor="let skill of skills" class="floating-skill" [ngStyle]="skill.style">
@@ -18,9 +18,36 @@
       <div class="main-flex">
         <!-- LEFT: text box -->
         <div class="intro-box">
-          <span class="dragged-title">Hi, I'm Ioana, a <span class="job-title-inline">Full Stack Developer</span>.<br>
-          </span>
-          <span>Some text about developing...</span>
+          <div class="">
+            <div class="row">
+              <div class="col-12">
+                <div class="landing-title">
+                  <div>
+                    <h1>a passionate </h1>
+                  </div>
+                  <div class="sub-title">
+                    <div>
+                      <h4>Hi, I'm Ioana,</h4>
+                      <h2>Full Stack
+                        Developer</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <span class="dragged-title">Hi, I'm Ioana, a passionate <span class="job-title-inline">Full Stack
+              Developer</span>.<br>
+          </span> -->
+          <div>
+            <span>I specialize in building modern, responsive web applications from concept to deployment. With a strong
+              foundation in both frontend and backend technologies, I love creating user-friendly experiences and
+              solving
+              complex problems through clean, efficient code. Always eager to learn, grow, and bring new ideas to
+              life.</span>
+          </div>
+
           <div class="box-button">
             <span>Social media section</span>
           </div>
@@ -32,7 +59,10 @@
         <!-- RIGHT: photo box -->
         <div class="photo-box">
           <div class="avatar">
-            <p>there will be my picture</p>
+            <div class="img-position">
+              <img src="assets/avatar/avatar.png" alt="avatar">
+            </div>
+
           </div>
 
         </div>
@@ -41,8 +71,15 @@
     </ng-container>
 
   </section>
-
+  <section id="tech-stack" class="section-py-space flex-container">
+    <app-tech-suit-page>
+    </app-tech-suit-page>
+  </section>
   <section class="section-py-space flex-container">
     <app-project-content></app-project-content>
+  </section>
+  <section class="section-py-space flex-container">
+    <app-contact-section>
+    </app-contact-section>
   </section>
 </div>

@@ -1,4 +1,4 @@
-.col-container{
+.col-container {
   height: 100vh;
 }
 .flex-container {
@@ -13,15 +13,15 @@
 }
 
 .section-py-space {
-  padding-top: 2rem;
- padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .slide-in-text {
-     overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
 
   span {
     display: inline-block;
@@ -46,7 +46,6 @@
   }
 }
 
-
 .skills-cloud {
   position: relative;
   width: 100%;
@@ -58,13 +57,10 @@
   position: absolute;
   color: #fff;
   font-weight: 300;
-  animation: 
-    shrinkIn 0.5s ease-out forwards,
-    shrinkOut 0.5s ease-in forwards;
+  animation: shrinkIn 0.5s ease-out forwards, shrinkOut 0.5s ease-in forwards;
   opacity: 0;
   animation-delay: var(--delay-in), var(--delay-out);
 }
-
 
 @keyframes shrinkIn {
   0% {
@@ -88,7 +84,6 @@
   }
 }
 
-
 /* FINAL LAYOUT */
 
 .main-flex {
@@ -101,16 +96,23 @@
   gap: 2rem;
   animation: fadeInLayout 1s ease-in-out;
   width: 80%;
+  margin-top: 4rem;
 }
 
 @keyframes fadeInLayout {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .intro-box {
-  width: 50%;
-  padding: 2rem;
+  width: 60%;
+  // padding: 2rem;
   min-height: 300px;
   position: relative;
   color: aliceblue;
@@ -129,8 +131,8 @@
 }
 
 .photo-box .avatar {
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
   border-radius: 50%;
   border: 4px solid white;
   background-color: #ffffff22; // subtle background for placeholder
@@ -141,8 +143,22 @@
   color: white;
   font-weight: bold;
   box-shadow: 0px 0px 14px 8px #f4f3f6;
-}
+  .img-position {
+    width: 100%;
+    height: 100%;
+    padding: 10% 10% 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
 
 /* Title drag-in effect */
 .dragged-title {
@@ -150,8 +166,14 @@
 }
 
 @keyframes dragIn {
-  0% { opacity: 0; transform: translate(200px, -50px) scale(0.8); }
-  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translate(200px, -50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 .job-title-inline {
@@ -159,7 +181,7 @@
   font-size: 2rem;
 }
 
-.box-button{
+.box-button {
   padding-left: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -169,7 +191,7 @@
   border: 2px solid white;
   border-radius: 999px; // Makes it pill/circle-shaped
   background-color: aliceblue;
-  color: #131c2b; 
+  color: #131c2b;
   box-shadow: 0 0 15px white;
   padding: 8px 20px;
   font-weight: bold;
@@ -178,6 +200,97 @@
   &:hover {
     background-color: rgba(255, 255, 255, 0.1); // subtle hover effect
     box-shadow: 0 0 25px white;
-    color:aliceblue;
+    color: aliceblue;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-flex {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .intro-box {
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .job-title-inline {
+    font-size: 1.5rem;
+  }
+
+  .photo-box {
+    width: 80%;
+    min-height: 200px;
+    margin-top: 2rem;
+  }
+
+  .photo-box .avatar {
+    max-width: 150px;
+    max-height: 150px;
+    box-shadow: 0px 0px 8px 4px #f4f3f6;
+  }
+
+  .photo-box .img-position {
+    padding: 5%;
+  }
+
+  .custom-glow-button {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.landing-title {
+  position: relative;
+  text-align: center;
+  h1 {
+    font-size: calc(80px + 0.025 * (40vw - 320px));
+    color: aliceblue;
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: 0.05;
+    margin-bottom: 50px;
+  }
+  .sub-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  h4 {
+    font-size: calc(12px + 5 * (100vw - 320px) / 1600);
+    color: aliceblue;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+  }
+  h2 {
+    font-size: 4rem;
+    color: #dde5eb;
+    text-shadow: #000000;
+    margin-bottom: 1.5rem;
   }
 }
