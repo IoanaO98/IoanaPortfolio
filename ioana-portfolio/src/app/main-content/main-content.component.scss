@@ -15,6 +15,7 @@
 .section-py-space {
   padding-top: 4rem;
   padding-bottom: 4rem;
+   background: linear-gradient(to bottom, #0f0f0f 30%, #1c1c40 70%);
 }
 
 .slide-in-text {
@@ -95,7 +96,7 @@
   padding: 2rem;
   gap: 2rem;
   animation: fadeInLayout 1s ease-in-out;
-  width: 80%;
+  width: 100%;
   margin-top: 4rem;
 }
 
@@ -111,18 +112,20 @@
 }
 
 .intro-box {
-  width: 60%;
+ // width: 60%;
   // padding: 2rem;
-  min-height: 300px;
+ // min-height: 300px;
   position: relative;
   color: aliceblue;
   font-size: 1.5rem;
   font-family: monospace;
+   
 }
 
 /* Circular avatar container */
 .photo-box {
-  width: 50%;
+  //width: 50%;
+  width: 200rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,16 +209,16 @@
 
 @media (max-width: 768px) {
   .main-flex {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
     padding: 1rem;
   }
 
   .intro-box {
-    width: 90%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .job-title-inline {
@@ -248,7 +251,6 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding-bottom: 2rem;
 }
 .col-12 {
   flex: 0 0 auto;
@@ -293,4 +295,30 @@
     text-shadow: #000000;
     margin-bottom: 1.5rem;
   }
+
+ 
+}
+
+@media (max-width: 768px) {
+   .landing-title {
+    margin-bottom: 0;
+    h1 {
+      display: none;
+    }
+     h2 {
+      font-size: 2rem;
+    }
+    .sub-title {
+      position: unset;
+      margin-top: 0;
+      h4 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+.intro-grid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
 }
