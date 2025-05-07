@@ -74,8 +74,8 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-     padding-left: 0;
-    padding-right: 0;
+     padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -85,4 +85,12 @@
      @media (max-width: 768px) {
     font-size: small;
   }
+}
+
+.section-py-space {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+      padding-left: 2rem;
+    padding-right: 2rem;
+   background: linear-gradient(to bottom, #0f0f0f 30%, #1c1c40 70%);
 }

@@ -2,10 +2,19 @@ import { Component } from '@angular/core';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRippleModule } from '@angular/material/core';
 @Component({
   selector: 'app-tech-suit-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+  ],
   templateUrl: './tech-suit-page.component.html',
   styleUrl: './tech-suit-page.component.scss',
 })
