@@ -60,14 +60,26 @@ flex-direction: row;
     }
   }
 
-  mat-form-field-appearance-outline mat-primary{
-    color: aliceblue;
+ ::ng-deep  mat-form-field-appearance-outline mat-primary{
+    border: 2px solid white !important;
   }
 
-::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline {
-      border: 2px solid white !important; // Your custom color
-}
+// ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline {
+//       border: 2px solid white !important; // Your custom color
+// }
 
-::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined.mdc-text-field--focused .mdc-notched-outline {
-      border: 2px solid white !important; // Custom color on focus
-}
+// ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined.mdc-text-field--focused .mdc-notched-outline {
+//       border: 2px solid white !important; // Custom color on focus
+// }
+
+// ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline .mat-primary
+// {
+//   border: 2px solid white !important;
+// }
+
+// ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined.mdc-text-field--focused .mdc-notched-outline{
+//   border: 2px solid white !important;
+// }
+// ::ng-deep .mdc-text-field--hover:not(.mdc-text-field--disabled) .mdc-notched-outline {
+//   border-color: white !important;
+// }
