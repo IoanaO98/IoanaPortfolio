@@ -63,19 +63,20 @@
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
-    width: 200px;
+    width: 100%;
     max-width: 100%;
   }
 }
 @media (max-width: 768px) {
   .project-cards {
     justify-content: center;
-    display: flex;
     align-items: center;
     align-content: center;
-    flex-direction: column;
-     padding-left: 1rem;
+    padding-left: 1rem;
     padding-right: 1rem;
+    grid-template-columns: repeat(2, 2fr);
+    display: grid;
+    box-sizing: border-box;
   }
 }
 

@@ -18,5 +18,9 @@ export class AppComponent {
       'contact',
       sanitizer.bypassSecurityTrustResourceUrl('assets/svg/contact.svg')
     );
+    iconRegistry.addSvgIcon(
+      'chip-network',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/svg/chip-network.svg')
+    );
   }
 }

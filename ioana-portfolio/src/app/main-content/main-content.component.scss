@@ -1,5 +1,8 @@
 .col-container {
   height: 100vh;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 }
 .flex-container {
   display: flex;
@@ -215,6 +218,7 @@
     flex-direction: column;
     width: 100%;
     padding: 1rem;
+    margin-top: 4rem;
   }
 
   .intro-box {
@@ -229,7 +233,7 @@
   .photo-box {
     width: 80%;
     min-height: 200px;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   .photo-box .avatar {
