@@ -1,21 +1,24 @@
-<div class="tech-stack">
+<div class="tech-container">
   <h1>{{ title }}</h1>
-
-  <div class="grid">
-    <div class="grid-item" *ngFor="let category of techStack">
-      <div class="border-lines">
-        <div class="line"></div>
-      </div>
-      <!-- vertical line for this category -->
-      <div class="category">
+  <div class="tech-stack">
+    <div class="stack-layers">
+      <div class="layer" *ngFor="let category of techStack" (click)="selected = category.name"
+        [class.expanded]="selected === category.name">
         <h2>{{ category.name }}</h2>
-        <div *ngFor="let subcategory of category.subcategories">
-          <h3>{{ subcategory.subname }}</h3>
-          <ul>
-            <li *ngFor="let item of subcategory.items">{{ item }}</li>
-          </ul>
-        </div>
       </div>
     </div>
+
+    <div class="vertical-info" *ngIf="selected">
+      <ng-container *ngFor="let category of techStack">
+        <ng-container *ngIf="category.name === selected">
+          <h1>{{ category.name }}</h1>
+          <div *ngFor="let subcategory of category.subcategories">
+            <div class="vertical-label">{{ subcategory.subname }}</div>
+            <div *ngFor="let item of subcategory.items" class="vertical-item">{{ item }}</div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
   </div>
+
 </div>

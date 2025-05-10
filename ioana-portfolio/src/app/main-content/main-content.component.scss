@@ -265,6 +265,7 @@
 .landing-title {
   position: relative;
   text-align: center;
+
   h1 {
     font-size: calc(80px + 0.025 * (40vw - 320px));
     color: aliceblue;
@@ -307,6 +308,7 @@
 @media (max-width: 768px) {
    .landing-title {
     margin-bottom: 0;
+    
     h1 {
       display: none;
     }

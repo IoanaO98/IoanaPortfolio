@@ -93,3 +93,8 @@ flex-direction: row;
 ::ng-deep .mat-mdc-form-field textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);    // optional: softer white placeholder
 }
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline {
+  border-color: white !important;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}

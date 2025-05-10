@@ -22,5 +22,9 @@ export class AppComponent {
       'chip-network',
       sanitizer.bypassSecurityTrustResourceUrl('assets/svg/chip-network.svg')
     );
+    iconRegistry.addSvgIcon(
+      'connected-dot',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/svg/connected-dot.svg')
+    );
   }
 }

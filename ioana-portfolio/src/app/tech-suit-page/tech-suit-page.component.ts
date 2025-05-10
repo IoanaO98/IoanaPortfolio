@@ -21,6 +21,7 @@ import { MatRippleModule } from '@angular/material/core';
 export class TechSuitPageComponent {
   techStack: any[] = [];
   title: string = '';
+  selected: string = '';
 
   constructor(private http: HttpClient) {}
 
