@@ -1,64 +1,369 @@
-.section-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 10rem;
-    padding: 2rem;
+// === Cube Size Variables ===
+$cube-size-small: 40px;
+$cube-size-large: 80px;
+$cube-size-x-large: 100px;
+.section-py-space {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-.py-section{
-    padding-top: 10rem;
+.neon-carousel-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at left, #1c1c40, #0f0f0f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.books-cards-grid {
-  background-image: url('/assets/images/01.webp');
-  border-radius: 1rem;
+
+.page-position {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 10px #f4f3f6;
-  transition: transform 0.3s ease;
-  height: 300px;
-  width: 500px;
-  background-size: cover;
+  gap: 10rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100%;
+    padding-top: 10rem;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .books-app-info {
-  background-color: transparent;
-  border-radius: 1rem;
-  padding: 2rem;
+  max-width: 500px;
+  color: white;
   text-align: center;
-  transition: transform 0.3s ease;
-  height: 300px;
-  width: 500px;
-}
-.slide-in-text {
-  overflow: visible; 
-  white-space: normal; 
-  position: relative;  
-  top: auto;           
-  text-align: center;
-  width: 100%;
-  color: aliceblue;
+  margin-bottom: 2rem;
 
-  span {
-    display: inline-block;
-  transform: none;  
-  opacity: 0;
-  animation: slideIn 0.2s ease-out forwards;
-  word-wrap: break-word; 
+  .project-title {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .space {
-    width: 0.5em; 
+  .slide-in-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      animation: slideIn 0.5s ease forwards;
+      opacity: 0;
+
+      &.space {
+        width: 0.4em;
+      }
+    }
+  }
+}
+
+.floating-cubes-wrapper {
+  position: relative;
+  width: 500px;
+  height: auto;
+  perspective: 1000px;
+  margin-top: 3rem;
+
+  .phone {
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px solid #050505;
+    box-shadow: 0 0 20px rgb(251, 252, 252);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px) {
+      width: 160px;
+      height: 320px;
+    }
+
+    .phone-carousel {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 20px;
+    }
+
+    .carousel-track {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.6s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @mixin cubeSize($size) {
+    width: $size;
+    height: $size;
+
+    .face {
+      width: $size;
+      height: $size;
+    }
+
+    .front {
+      transform: translateZ(calc(#{$size} / 2));
+    }
+    .back {
+      transform: rotateY(180deg) translateZ(calc(#{$size} / 2));
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(calc(#{$size} / 2));
+    }
+    .left {
+      transform: rotateY(-90deg) translateZ(calc(#{$size} / 2));
+    }
+    .top {
+      transform: rotateX(90deg) translateZ(calc(#{$size} / 2));
+    }
+    .bottom {
+      transform: rotateX(-90deg) translateZ(calc(#{$size} / 2));
+    }
+  }
+
+  .real-3d-cube {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s infinite linear;
+
+    .face {
+      position: absolute;
+      background: transparent;
+      border: 1px solid #f8f8f8;
+      box-shadow: inset -13px -13px 14px 2px rgba(255, 255, 255, 0.959);
+    }
+
+    &.cube1 {
+      @include cubeSize($cube-size-small);
+      top: 7%;
+      left: 76px;
+      animation-delay: 0s;
+      z-index: 2;
+    }
+
+    &.cube2 {
+      @include cubeSize($cube-size-large);
+      top: 37%;
+      left: -8px;
+      animation-delay: 1s;
+      @media (max-width: 768px) {
+        left: 118px;
+      }
+    }
+
+    &.cube3 {
+      @include cubeSize($cube-size-small);
+      top: 30%;
+      right: -40px;
+      animation-delay: 0s;
+      @media (max-width: 768px) {
+        right: 45px;
+      }
+    }
+
+    &.cube4 {
+      @include cubeSize($cube-size-large);
+      top: 74%;
+      right: -53px;
+      animation-delay: 0s;
+      @media (max-width: 768px) {
+        top: 52%;
+        right: 35px;
+      }
+    }
+
+    &.cube5 {
+      @include cubeSize($cube-size-small);
+      top: 65%;
+      left: 40px;
+      animation-delay: 1s;
+    }
   }
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateX(-50%);
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  from {
+    transform: translateY(20px);
     opacity: 0;
   }
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes swipeUp {
+  0% {
+    transform: translateY(0%);
+  }
   100% {
-    transform: translateX(0%);
-    opacity: 1;
-   } 
+    transform: translateY(-300%); // For 3 images
+  }
+}
+
+.second-template {
+  display: flex;
+  width: 1440px;
+  max-width: 100%;
+  height: 500px;
+  padding: 2rem;
+  gap: 10rem;
+  .title {
+    width: 500px;
+    color: aliceblue;
+  }
+}
+
+.floating-cubes-stack {
+  position: relative;
+  width: 500px;
+  height: auto;
+  perspective: 1000px;
+  margin-top: 3rem;
+
+  @mixin cubeSize($size) {
+    width: $size;
+    height: $size;
+
+    .face-stack {
+      width: $size;
+      height: $size;
+    }
+
+    .face-stack-glow {
+      width: $size;
+      height: $size;
+    }
+
+    .front {
+      transform: translateZ(calc(#{$size} / 2));
+    }
+    .back {
+      transform: rotateY(180deg) translateZ(calc(#{$size} / 2));
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(calc(#{$size} / 2));
+    }
+    .left {
+      transform: rotateY(-90deg) translateZ(calc(#{$size} / 2));
+    }
+    .top {
+      transform: rotateX(90deg) translateZ(calc(#{$size} / 2));
+    }
+    .bottom {
+      transform: rotateX(-90deg) translateZ(calc(#{$size} / 2));
+    }
+    .text-color {
+      font-size: 1rem;
+      font-weight: 500;
+      color: aliceblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+    }
+  }
+
+  .real-3d-cube-stack {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotateCube 20s infinite linear;
+
+    .face-stack {
+      position: absolute;
+      background: #131c2b;
+      border: 1px solid #f8f8f8;
+      box-shadow: 1px -1px 6px 0px rgba(255, 255, 255, 0.959);
+    }
+
+    .face-stack-glow {
+      position: absolute;
+      background: transparent;
+      border: 1px solid #f8f8f8;
+      box-shadow: inset -6px -6px 10px 0px rgba(255, 255, 255, 0.959);
+    }
+
+    &.cube6 {
+      @include cubeSize($cube-size-small);
+      top: 7%;
+      right: 76px;
+      animation-delay: 0s;
+      z-index: 2;
+    }
+
+    &.cube7 {
+      @include cubeSize($cube-size-x-large);
+      top: 37%;
+      right: -8px;
+      animation-delay: 1s;
+      @media (max-width: 768px) {
+        left: 118px;
+      }
+    }
+
+    &.cube8 {
+      @include cubeSize($cube-size-small);
+      top: 30%;
+      right: -40px;
+      animation-delay: 0s;
+      @media (max-width: 768px) {
+        right: 45px;
+      }
+    }
+
+    &.cube9 {
+      @include cubeSize($cube-size-x-large);
+      top: 74%;
+      right: -53px;
+      animation-delay: 0s;
+      @media (max-width: 768px) {
+        top: 52%;
+        right: 35px;
+      }
+    }
+
+    &.cube10 {
+      @include cubeSize($cube-size-small);
+      top: 73%;
+      right: 107px;
+      animation-delay: 1s;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 <div class="tech-container">
   <h1>{{ title }}</h1>
   <div class="tech-stack">
-    <div class="stack-layers">
+    <div class="stack-layers" [class.animated]="animateStack">
       <div class="layer" *ngFor="let category of techStack" (click)="selected = category.name"
         [class.expanded]="selected === category.name">
         <h2>{{ category.name }}</h2>
@@ -11,7 +11,6 @@
     <div class="vertical-info" *ngIf="selected">
       <ng-container *ngFor="let category of techStack">
         <ng-container *ngIf="category.name === selected">
-          <h1>{{ category.name }}</h1>
           <div *ngFor="let subcategory of category.subcategories">
             <div class="vertical-label">{{ subcategory.subname }}</div>
             <div *ngFor="let item of subcategory.items" class="vertical-item">{{ item }}</div>

@@ -10,15 +10,19 @@ import { RouterModule } from '@angular/router';
   styleUrl: './bookstore-page.component.scss',
 })
 export class BookstorePageComponent {
-  title = `This is a fully responsive Bookstore web application developed using ASP.NET MVC, SQL Server Management Studio (SSMS), JavaScript, and CSS.<br>
-  The main page showcases a dynamic list of books fetched from a backend database, styled with custom CSS for a clean and modern user interface.<br>
-  Each book is displayed as a card component, featuring the title, author, pricing details (including discounts), and a call-to-action button for more details.<br>
-  The layout is structured using a grid system that ensures responsiveness across different screen sizes.`;
+  title = `This is a fully responsive Bookstore web application developed using ASP.NET MVC, SQL Server Management Studio (SSMS), JavaScript, and CSS.`;
 
   titleLetters: (string | { br: true })[] = [];
+  selectedCubeIndex = -1;
+  phoneImages: string[] = [
+    'assets/images/03.webp',
+    'assets/images/02.webp',
+    'assets/images/01.webp',
+  ];
 
-  constructor() {
-    // Split characters but preserve <br> as a special object
+  currentIndex: number = 0;
+  ngOnInit() {
+    // Typing animation (already handled)
     const splitByBr = this.title.split(/<br>/g);
     splitByBr.forEach((segment, i) => {
       segment.split('').forEach((char) => this.titleLetters.push(char));
@@ -26,7 +30,13 @@ export class BookstorePageComponent {
         this.titleLetters.push({ br: true });
       }
     });
+
+    // Auto-scroll images
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.phoneImages.length;
+    }, 3000); // Change every 3 seconds
   }
+
   isBr(item: string | { br: true }): item is { br: true } {
     return typeof item !== 'string' && 'br' in item;
   }
