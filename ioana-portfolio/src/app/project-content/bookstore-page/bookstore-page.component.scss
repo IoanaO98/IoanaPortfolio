@@ -2,12 +2,14 @@
 $cube-size-small: 40px;
 $cube-size-large: 80px;
 $cube-size-x-large: 100px;
+
 .section-py-space {
   padding-top: 4rem;
   padding-bottom: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
 .neon-carousel-wrapper {
   width: 100%;
   min-height: 100vh;
@@ -26,6 +28,7 @@ $cube-size-x-large: 100px;
   overflow: hidden;
   padding: 2rem;
   gap: 10rem;
+  width: 100%;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
@@ -38,7 +41,8 @@ $cube-size-x-large: 100px;
 }
 
 .books-app-info {
-  max-width: 500px;
+  max-width: 100%;
+  width: 500px;
   color: white;
   text-align: center;
   margin-bottom: 2rem;
@@ -72,7 +76,12 @@ $cube-size-x-large: 100px;
   width: 500px;
   height: auto;
   perspective: 1000px;
-  margin-top: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 
   .phone {
     width: 300px;
@@ -167,6 +176,9 @@ $cube-size-x-large: 100px;
       left: 76px;
       animation-delay: 0s;
       z-index: 2;
+      @media screen {
+        left: 93px;
+      }
     }
 
     &.cube2 {
@@ -175,7 +187,7 @@ $cube-size-x-large: 100px;
       left: -8px;
       animation-delay: 1s;
       @media (max-width: 768px) {
-        left: 118px;
+        left: 131px;
       }
     }
 
@@ -185,7 +197,7 @@ $cube-size-x-large: 100px;
       right: -40px;
       animation-delay: 0s;
       @media (max-width: 768px) {
-        right: 45px;
+        right: 91px;
       }
     }
 
@@ -195,8 +207,8 @@ $cube-size-x-large: 100px;
       right: -53px;
       animation-delay: 0s;
       @media (max-width: 768px) {
-        top: 52%;
-        right: 35px;
+        top: 91%;
+        right: 134px;
       }
     }
 
@@ -205,6 +217,9 @@ $cube-size-x-large: 100px;
       top: 65%;
       left: 40px;
       animation-delay: 1s;
+      @media (max-width: 768px) {
+        left: 101px;
+      }
     }
   }
 }
@@ -334,9 +349,15 @@ $cube-size-x-large: 100px;
       right: -8px;
       animation-delay: 1s;
       @media (max-width: 768px) {
-        left: 118px;
+        left: -23px;
+        top: 192px;
+       }
+       @media (max-width: 1024px) {
+        top: 64%;
+        right: 55px;
+    
+       }
       }
-    }
 
     &.cube8 {
       @include cubeSize($cube-size-small);
@@ -346,6 +367,9 @@ $cube-size-x-large: 100px;
       @media (max-width: 768px) {
         right: 45px;
       }
+      @media (max-width: 1024px) {
+        right: 31px;
+      }
     }
 
     &.cube9 {
@@ -354,8 +378,12 @@ $cube-size-x-large: 100px;
       right: -53px;
       animation-delay: 0s;
       @media (max-width: 768px) {
-        top: 52%;
-        right: 35px;
+        top: 26%;
+        right: 152px;
+      }
+      @media (max-width: 1024px) {
+        top: 30%;
+        right: 146px;
       }
     }
 
@@ -364,6 +392,12 @@ $cube-size-x-large: 100px;
       top: 73%;
       right: 107px;
       animation-delay: 1s;
+      @media (max-width: 768px)  {
+        left: -159px;
+      }
+      @media (max-width: 1024px) {
+        right: 249px;
+      }
     }
   }
 }
