@@ -1,0 +1,21 @@
+<div class="side-bar-container" [class.expanded]="isExpanded" (click)="toggleSidebar()">
+  <button class="toggle-btn">
+    <mat-icon>{{ isExpanded ? 'chevron_left' : 'chevron_right' }}</mat-icon>
+  </button>
+
+  <div>
+    <div class="icon">
+      <mat-icon>home</mat-icon>
+      <span *ngIf="isExpanded">Home</span>
+    </div>
+    <div class="icon">
+      <mat-icon>book</mat-icon>
+      <span *ngIf="isExpanded">Projects</span>
+    </div>
+    <div class="icon">
+      <mat-icon>email</mat-icon>
+      <span *ngIf="isExpanded">Contact</span>
+    </div>
+  </div>
+
+</div>
