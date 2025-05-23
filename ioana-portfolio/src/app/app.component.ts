@@ -35,5 +35,9 @@ export class AppComponent {
       'connected-dot',
       sanitizer.bypassSecurityTrustResourceUrl('assets/svg/connected-dot.svg')
     );
+    iconRegistry.addSvgIcon(
+      'Reporting',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/svg/Reporting.svg')
+    );
   }
 }
