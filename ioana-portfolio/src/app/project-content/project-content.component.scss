@@ -1,10 +1,15 @@
 .flex-project-container{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 1440px;
+    max-width:100%;
     height: inherit;
     flex-direction: column;
     gap: 5rem;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      width: auto;
+    }
 }
 
 .title-section{
@@ -12,9 +17,6 @@
     justify-content: center;
     color: aliceblue;
     font-size: xxx-large;
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
 }
 .project-cards {
     display: grid;
@@ -74,7 +76,7 @@
     align-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(1, 2fr);
     display: grid;
     box-sizing: border-box;
   }
@@ -93,5 +95,5 @@
   padding-bottom: 4rem;
       padding-left: 2rem;
     padding-right: 2rem;
-   background: linear-gradient(to bottom, #0f0f0f 30%, #1c1c40 70%);
+  // background: linear-gradient(to bottom, #0f0f0f 30%, #1c1c40 70%);
 }

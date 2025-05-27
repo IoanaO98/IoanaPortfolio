@@ -20,8 +20,11 @@
   padding-bottom: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
-   background: linear-gradient(to bottom, #0f0f0f 30%, #1c1c40 70%);
-   margin-left: 3rem;
+  @media (max-width: 768px) {
+    width: 400px;
+    max-width: 100%;
+  }
+ // background: radial-gradient(circle at left, #1c1c40, #0f0f0f);
 }
 
 .slide-in-text {
@@ -98,13 +101,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding: 2rem;
-  gap: 2rem;
+  height: 100vh;
   animation: fadeInLayout 1s ease-in-out;
   width: 100%;
-  margin-top: 12rem;
-  margin-bottom: 4rem;
+  // margin-top: 12rem;
+  // margin-bottom: 4rem;
+    padding: 4rem;
+    gap: 4rem;
+    max-width: 1440px;
+    margin: auto;
 }
 
 @keyframes fadeInLayout {

@@ -1,14 +1,22 @@
-<div class="flex-nav">
-  <nav class="navbar navbar-dark">
-    <a href="#home">
-      Portfolio
+<nav class="navbar" [class.mobile]="isMenuOpen">
+  <a class="logo" routerLink="/">Portfolio</a>
+
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
+
+  <div class="nav-links" [class.open]="isMenuOpen">
+    <a routerLink="/project/bookstore-page" routerLinkActive="active" (click)="closeMenu()">
+      <mat-icon class="mobile-icon">book</mat-icon>
+      <span class="desktop-label">Projects</span>
     </a>
-    <div class="list-items">
-      <div routerLink="/project/bookstore-page" routerLinkActive="/project/bookstore-page"><span>Projects</span></div>
-      <a href="#tech-stack">
-        <span>Tech</span>
-      </a>
-      <span>Contact</span>
-    </div>
-  </nav>
-</div>
+    <a href="#tech_stack" (click)="closeMenu()">
+      <mat-icon class="mobile-icon">code</mat-icon>
+      <span class="desktop-label">Tech</span>
+    </a>
+    <a href="#contact" (click)="closeMenu()">
+      <mat-icon class="mobile-icon">email</mat-icon>
+      <span class="desktop-label">Contact</span>
+    </a>
+  </div>
+</nav>

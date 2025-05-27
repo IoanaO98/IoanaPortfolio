@@ -13,7 +13,7 @@ $cube-size-x-large: 100px;
 .neon-carousel-wrapper {
   width: 100%;
   min-height: 100vh;
-  background: radial-gradient(circle at left, #1c1c40, #0f0f0f);
+ // background: radial-gradient(circle at left, #1c1c40, #0f0f0f);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,12 @@ $cube-size-x-large: 100px;
     gap: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    width: 400px;
+    max-width: 100%;
+  }
+  @media (max-width: 450px)  {
+    width: 300px;
+    max-width: 100%;
   }
 }
 
@@ -260,6 +266,15 @@ $cube-size-x-large: 100px;
   height: 500px;
   padding: 2rem;
   gap: 10rem;
+
+  @media (max-width: 768px)  {
+    width: 400px;
+    max-width: 100%;
+  }
+  @media (max-width: 450px)  {
+    width: 300px;
+    max-width: 100%;
+  }
   .title {
     width: 500px;
     color: aliceblue;
