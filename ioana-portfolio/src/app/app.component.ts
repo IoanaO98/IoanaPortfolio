@@ -7,17 +7,16 @@ import { CommonModule } from '@angular/common';
 import { SideBarComponent } from './side-bar/side-bar.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    NavBarComponent,
-    MatIconModule,
-    CommonModule,
-    SideBarComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavBarComponent,
+        MatIconModule,
+        CommonModule,
+        SideBarComponent,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'ioana-portfolio';

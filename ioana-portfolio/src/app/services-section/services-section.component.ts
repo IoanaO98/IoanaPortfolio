@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
-  selector: 'app-services-section',
-  standalone: true,
-  imports: [SlickCarouselModule, CommonModule],
-  templateUrl: './services-section.component.html',
-  styleUrl: './services-section.component.scss',
+    selector: 'app-services-section',
+    imports: [SlickCarouselModule, CommonModule],
+    templateUrl: './services-section.component.html',
+    styleUrl: './services-section.component.scss'
 })
 export class ServicesSectionComponent {
   cards = [

@@ -4,11 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: true,
-  imports: [RouterModule, CommonModule, MatIconModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
+    selector: 'app-nav-bar',
+    imports: [RouterModule, CommonModule, MatIconModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   isMenuOpen = false;

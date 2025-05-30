@@ -12,17 +12,16 @@ interface RoleData {
 }
 
 @Component({
-  selector: 'app-tehilax-page',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatTooltipModule,
-    NgxChartsModule,
-    DecimalPipe,
-    NgForOf,
-  ],
-  templateUrl: './th-page.component.html',
-  styleUrl: './th-page.component.scss',
+    selector: 'app-tehilax-page',
+    imports: [
+        MatIconModule,
+        MatTooltipModule,
+        NgxChartsModule,
+        DecimalPipe,
+        NgForOf,
+    ],
+    templateUrl: './th-page.component.html',
+    styleUrl: './th-page.component.scss'
 })
 export class TehilaxPageComponent {
   data = {

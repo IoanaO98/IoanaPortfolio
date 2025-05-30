@@ -11,17 +11,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRippleModule } from '@angular/material/core';
 @Component({
-  selector: 'app-tech-suit-page',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRippleModule,
-  ],
-  templateUrl: './tech-suit-page.component.html',
-  styleUrl: './tech-suit-page.component.scss',
+    selector: 'app-tech-suit-page',
+    imports: [
+        CommonModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatRippleModule,
+    ],
+    templateUrl: './tech-suit-page.component.html',
+    styleUrl: './tech-suit-page.component.scss'
 })
 export class TechSuitPageComponent implements AfterViewInit {
   techStack: any[] = [];

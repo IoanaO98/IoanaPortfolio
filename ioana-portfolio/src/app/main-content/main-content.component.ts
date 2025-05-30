@@ -6,18 +6,17 @@ import { TechSuitPageComponent } from '../tech-suit-page/tech-suit-page.componen
 import { ContactSectionComponent } from '../contact-section/contact-section.component';
 import { ServicesSectionComponent } from '../services-section/services-section.component';
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ProjectContentComponent,
-    MatButtonModule,
-    TechSuitPageComponent,
-    ContactSectionComponent,
-    ServicesSectionComponent,
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    selector: 'app-main-content',
+    imports: [
+        CommonModule,
+        ProjectContentComponent,
+        MatButtonModule,
+        TechSuitPageComponent,
+        ContactSectionComponent,
+        ServicesSectionComponent,
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent implements OnInit {
   showTitle = false;

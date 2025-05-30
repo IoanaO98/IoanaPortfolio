@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-bookstore-page',
-  standalone: true,
-  imports: [RouterModule, CommonModule],
-  templateUrl: './bookstore-page.component.html',
-  styleUrl: './bookstore-page.component.scss',
+    selector: 'app-bookstore-page',
+    imports: [RouterModule, CommonModule],
+    templateUrl: './bookstore-page.component.html',
+    styleUrl: './bookstore-page.component.scss'
 })
 export class BookstorePageComponent {
   title = `This is a fully responsive Bookstore web application developed using ASP.NET MVC, SQL Server Management Studio (SSMS), JavaScript, and CSS.`;
