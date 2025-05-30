@@ -43,5 +43,9 @@ export class AppComponent {
       'schedule',
       sanitizer.bypassSecurityTrustResourceUrl('assets/svg/schedule.svg')
     );
+    iconRegistry.addSvgIcon(
+      'roles',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/svg/roles.svg')
+    );
   }
 }

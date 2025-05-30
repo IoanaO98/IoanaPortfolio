@@ -4,7 +4,7 @@ import { ProjectContentComponent } from '../project-content/project-content.comp
 import { MatButtonModule } from '@angular/material/button';
 import { TechSuitPageComponent } from '../tech-suit-page/tech-suit-page.component';
 import { ContactSectionComponent } from '../contact-section/contact-section.component';
-import { HeroSectionComponent } from '../hero-section/hero-section.component';
+import { ServicesSectionComponent } from '../services-section/services-section.component';
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -14,7 +14,7 @@ import { HeroSectionComponent } from '../hero-section/hero-section.component';
     MatButtonModule,
     TechSuitPageComponent,
     ContactSectionComponent,
-    HeroSectionComponent,
+    ServicesSectionComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

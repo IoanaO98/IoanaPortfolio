@@ -1,0 +1,6 @@
+<ngx-slick-carousel class="carousel" [config]="slideConfig">
+  <div ngxSlickItem *ngFor="let card of cards" class="slide">
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.description }}</p>
+  </div>
+</ngx-slick-carousel>
