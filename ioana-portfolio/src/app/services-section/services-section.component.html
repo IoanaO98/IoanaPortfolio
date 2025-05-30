@@ -1,6 +1,24 @@
-<ngx-slick-carousel class="carousel" [config]="slideConfig">
-  <div ngxSlickItem *ngFor="let card of cards" class="slide">
-    <h3>{{ card.title }}</h3>
-    <p>{{ card.description }}</p>
+<div class="px">
+  <div class="p-2 h-px w-auto bg-gradient-to-r from-purple-500 to-purple-700 rounded-full
+  shadow-[0_0_10px_#a855f7,0_0_20px_#9333ea] my-8 ">
   </div>
-</ngx-slick-carousel>
+</div>
+<span class="title-section">Services</span>
+<div class="carousel-container">
+  <div class="carousel-wrapper" [style.transform]="'translateX(-' + activeIndex * (100 / visibleCount) + '%)'">
+    <div *ngFor="let card of cards" class="carousel-item">
+      <div class="card">
+        <h4>{{ card.title }}</h4>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button (click)="prevSlide()">‹</button>
+    <div class="dots">
+      <span *ngFor="let card of cards; let i = index" [class.active]="i === activeIndex" (click)="goToSlide(i)"></span>
+    </div>
+    <button (click)="nextSlide()">›</button>
+  </div>
+</div>
