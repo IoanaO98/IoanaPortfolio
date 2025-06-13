@@ -1,83 +1,109 @@
+
 .carousel-container {
-    width: auto;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    padding: 2rem;
+  width: 1024px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+  max-width: 100%;
+}
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px; // ✅ controls card width
+  margin: auto;     // ✅ centers each slide
+
+  .card {
+    width: 100%; // use full width of .carousel-item
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-  
-  .carousel-wrapper {
+}
+.px{
+  padding: 4rem;}
+.title-section {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  font-size: xxx-large;
+  padding: 1rem;
+}
+
+.px {
+  padding: 4rem;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+.services-carousel {
+  padding-bottom: 3rem;
+
+  .owl-stage-outer {
+    overflow: visible; // ➤ show partial next/prev items
+  }
+
+  .owl-stage {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: calc(100% * 5 / 3); // cards.length / visibleCount
+    align-items: center;
   }
-  
-  .carousel-item {
-    //flex: 0 0 calc(100% / 3); // Show 3 cards at once
-    flex: 0 0 15.333333%;
+
+  .owl-nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-  
-    .card {
-      width: 80%;
-     height: 300px;
-      background: #1e1b28;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
-    }
-  }
-  
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 1rem;
-    gap: 1rem;
-  padding: 1rem ;
+
     button {
-        height: 40px;
-        background: #3e4759;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        border-radius: 50%;
-        /* padding: 1rem 1rem; */
-        cursor: pointer;
-        width: 40px;
-    
-    }
-  
-    .dots {
-      display: flex;
-      gap: 0.5rem;
-  
-      span {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: gray;
-        cursor: pointer;
-        &.active {
-          background: #e0b3ff;
-          transform: scale(1.3);
-         // width: 1rem;
-        }
+      background: #3e4759;
+      color: white;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 0 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #a855f7;
       }
     }
   }
-  .title-section{
+
+  .owl-dots {
     display: flex;
     justify-content: center;
-    color: aliceblue;
-    font-size: xxx-large;
-    padding: 1rem;
+    margin-top: 1rem;
+    gap: 0.5rem;
+
+    .owl-dot {
+      width: 10px;
+      height: 10px;
+      background: gray;
+      border-radius: 50%;
+      transition: all 0.3s;
+
+      &.active {
+        background: #e0b3ff;
+        transform: scale(1.3);
+      }
+    }
+  }
 }
 
-.px{
-    padding: 4rem;
+.owl-carousel{
+  width: 800px;
 }
