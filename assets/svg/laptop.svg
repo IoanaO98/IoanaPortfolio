@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1122 1122" style="enable-background:new 0 0 1122 1122;" xml:space="preserve">
+<g id="Bg">
+	<rect style="fill:transparent;" width="1122" height="1122"/>
+</g>
+<g id="object">
+	<g>
+		<g>
+			<path style="fill:#d1c3e9;" d="M849.435,757.776h-576.87c-16.214,0-29.358-13.144-29.358-29.358V350.453
+				c0-16.214,13.144-29.358,29.358-29.358h576.87c16.214,0,29.358,13.144,29.358,29.358v377.965
+				C878.793,744.632,865.649,757.776,849.435,757.776z"/>
+			<rect x="271.233" y="357.708" style="fill:#D9E2ED;" width="579.534" height="363.454"/>
+			<circle style="fill:#F4F4F6;" cx="561" cy="339.225" r="7.927"/>
+		</g>
+		<g>
+			<path style="fill:#8f73c1;" d="M900.326,800.905H221.674c-14.732,0-26.674-11.943-26.674-26.674v-16.455h732v16.455
+				C927,788.963,915.057,800.905,900.326,800.905z"/>
+			<path style="fill:#F4F4F6;" d="M609.476,769.557h-96.951c-2.953,0-5.346-2.394-5.346-5.346v-6.435h107.644v6.435
+				C614.822,767.164,612.428,769.557,609.476,769.557z"/>
+		</g>
+		<rect x="271.233" y="357.708" style="fill:#8f73c1;" width="579.534" height="37.392"/>
+		<rect x="494.1" y="438.452" style="fill:#F4F4F6;" width="154.873" height="95.805"/>
+		<rect x="673.794" y="438.452" style="fill:#F4F4F6;" width="154.873" height="95.805"/>
+		<rect x="293.333" y="438.452" style="fill:#F4F4F6;" width="178.667" height="245.097"/>
+		<rect x="494.1" y="556.505" style="fill:#F4F4F6;" width="334.566" height="25.333"/>
+		<rect x="494.1" y="604.728" style="fill:#F4F4F6;" width="334.566" height="25.333"/>
+		<g>
+			<g>
+				<polygon style="opacity:0.5;fill:#d1c3e9;" points="356.622,600.238 404.289,541.579 452,600.291 				"/>
+				<polygon style="fill:#d1c3e9;" points="313.333,600.228 369.56,531.036 425.838,600.291 				"/>
+			</g>
+			<circle style="fill:#8f73c1;" cx="390.643" cy="531.038" r="9.33"/>
+		</g>
+	</g>
+</g>
+</svg>
